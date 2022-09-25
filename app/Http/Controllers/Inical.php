@@ -175,6 +175,7 @@ public function buscaCampo(Request $request){
     }
 
   public function api(){
+    /*seleciona dados de duas tabelas , contatos e enderecos para mostrar na api */ 
     $contatos= DB::select('select * from contatos as c INNER JOIN enderecos as e ON
    c.id_endereco = e.id ORDER BY c.id DESC');
 
